@@ -1,0 +1,21 @@
+.registration {
+    height: 148px;
+    background: #F8F3F4;
+
+    .text__registration {
+        display: block;
+        padding-top: 59px;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+        color: $dark-pink-color;
+
+        @include mobile{
+            text-align: center;
+        }
+        @include min-mobile{
+            text-align: center;
+        }
+    }
+    
+}

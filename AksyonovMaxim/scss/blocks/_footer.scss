@@ -1,0 +1,241 @@
+.footer {
+    background-image: url("../img/footer.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 448px;
+    background-size: cover;
+
+    @include mobile {
+        height: 550px;
+    }
+
+    &__woman-img {
+        margin: 88px 0 0 140px;
+
+        @include tablet{
+            margin: 50px 0 0 135px;
+        }
+
+        @include mobile{
+            margin: 50px 0 0 135px; 
+        }
+
+        @include min-mobile{
+            margin: 50px 0 0 100px;
+        }
+    }
+    
+    &__title {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+        text-transform: uppercase;
+        align-content: center;
+        width: 350px;
+
+        @include min-mobile{
+            width: 320px;
+        }
+    }
+    
+    &__subscribe {
+        margin-top: 150px;
+        margin-right: 100px;
+
+        @include tablet{
+            margin-top: -140px;
+            margin-left: 100px;
+        }
+
+        @include min-mobile{
+            margin-right: 0 auto;
+            margin-left: 0 auto;
+        }
+    }
+    
+    &__subscribe-sub {
+        color:#222224;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 38px; 
+        display: block; 
+    }
+    
+    &__descripteon-subscribe {
+        text-align: center;
+        padding-bottom: 32px;
+
+        @include tablet{
+            margin-top: 58px;
+        }
+    }
+    
+    &__descripteon {
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    
+    &__text {
+        margin-top: 30px;
+        width: 360px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+        padding-bottom: 126px;
+
+        @include tablet{
+            margin-top: 5px;
+        }
+
+        @include min-mobile{
+            width: 300px;
+        }
+    }
+    
+    &__from {
+        outline: none;
+        border: none;
+        position: relative;
+        width: 230px;
+        height: 47px;
+        border-radius: 50px 0 0 50px;
+        background: #E1E1E1;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        padding-left: 22px;
+
+        @include min-mobile{
+            width: 200px;
+            margin-left: 2px;
+        }
+    }
+    
+    &__from__descripteon {
+        @include tablet{
+            padding-bottom: 140px;
+        }
+    }
+    
+    &__button {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        outline: none;
+        border: solid 1px $dark-pink-color;
+        background:#F4F4F4 70%;
+        color: $dark-pink-color ;
+        border-radius: 0 50px 50px 0;
+        position: absolute;
+        width: 100px;
+        height: 49px;
+
+        @include min-mobile{
+            width: 90px;
+        }
+    }
+    
+    &__button:hover {
+        color: $light-white-color;
+        background-color: $dark-pink-color;
+        outline: none;
+    }
+}
+
+.footer__social {
+    background-color: $black-color;
+    display: flex;
+    justify-content: space-between;
+    min-height: 79px;
+    align-items: center;
+
+    &__network {
+        display: flex;
+        justify-content: space-between;
+
+        @include min-mobile{
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        @include mobile{
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+    }
+
+    &__rights__block {
+        padding: 30px 0 30px 0;
+    }
+    
+    &__img__social {
+        padding: 24px 0 24px 0;
+
+        @include min-mobile{
+            padding: 43px 0 0 0;
+        }
+        @include mobile{
+            padding: 43px 0 0 0;
+        }
+    }
+    &__list__social {
+        display: flex;
+        margin: 0;
+        list-style: none;
+    }
+    
+    &__facebook {
+        width: 32px;
+        height: 32px;
+        margin-right: 7px;
+    }
+    
+    &__instagram {
+        width: 32px;
+        height: 32px;
+        margin-right: 7px;
+    }
+    
+    &__pinterest {
+        width: 32px;
+        height: 32px;
+    }
+    
+    &__twitter {
+        position: initial;
+        background-image: url(../img/Twitter.svg);
+        width: 32px;
+        height: 32px;
+        margin-left: 7px;
+    }
+    &__facebook__svg,
+    &__instagram__svg,
+    &__pinterest__svg,
+    &__twitter__svg{
+        background-color: $light-white-color;
+        fill: $black-color;
+    }
+    &__facebook__svg:hover,
+    &__facebook__svg:focus,
+    &__instagram__svg:hover,
+    &__instagram__svg:focus,
+    &__pinterest__svg:hover,
+    &__pinterest__svg:focus,
+    &__twitter__svg:hover,
+    &__twitter__svg:focus{
+        background-color: $dark-pink-color;
+        fill: $light-white-color;
+    }
+
+    &__rights {
+        color: $gray-color;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+    }
+}

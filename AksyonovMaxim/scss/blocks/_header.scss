@@ -1,0 +1,274 @@
+.header {
+    position: relative;
+    background-color: $black-color;
+    
+    &__form {
+        display: none;
+        position: relative;
+        margin-left: 20px;
+
+        @include mobile{
+            margin-left: 10px;
+        }
+    }
+    
+    [type="search"]:hover, 
+    [type="search"]:focus{
+        box-shadow: 0 0 0 3px $dark-pink-color;
+    }
+    
+    &__icon {
+        display: flex;
+    }
+
+    &__search {
+        display: flex;
+    }
+
+    &__button-search:focus + .header__form,
+    &__button-search:hover + .header__form{
+        display: block;
+    }
+
+    &__form:focus,
+    &__form:hover{
+        display: block;
+    }
+    &__search {
+        position: relative;
+    }
+
+    &__button-search {
+        border: none;
+        background: transparent;
+    }
+
+    &__button__nav {
+        display: flex;
+        position: relative;
+        right: 0;
+    }
+    
+    &_navigation {
+        z-index: 1;
+        position: absolute;
+        width: 232px;
+        height: 764px; 
+        top: 170%;
+        right: -220px;
+        background: $light-white-color;
+        display: none;
+        box-shadow: 0 0 0 9000px rgba(0, 0, 0, 0.5);
+
+        @include tablet{
+            right: -40px;
+        }
+        @include mobile{
+            right: -22px;
+            top: 180%;
+            height: 700px;
+        }
+    }
+
+
+    &__button{
+        background-color: $black-color;
+        fill: $light-white-color;
+    }
+    
+    &__button:hover &__burger,
+    &__button:focus &__burger{
+        fill: $dark-pink-color;
+    }
+
+    &__loupe{
+        background-color: $black-color;
+        fill: $light-white-color;
+    }
+    &__loupe:hover,
+    &__loupe:focus{
+        fill: $dark-pink-color;
+    }
+
+    &__human{
+        background-color: $black-color;
+        fill: $light-white-color;
+    }
+    
+    &__human:hover,
+    &__human:focus{
+        fill: $dark-pink-color;
+    }
+    
+    &__basket__svg{
+        background-color: $black-color;
+        fill: $light-white-color;
+    }
+    
+    &__basket__svg:hover,
+    &__basket__svg:focus{
+        fill: $dark-pink-color;
+    }
+
+    &__button:hover + &_navigation,
+    &__button:focus + &_navigation{
+        display: block;
+    }
+    
+    &_navigation:focus{
+        display: block;
+    }
+    
+    &__title {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17px;
+        margin: 37px 0 0 34px;
+    }
+    
+    &__navigation-list {
+        list-style: none;
+    }
+    
+    &__navigation-list > li {
+        margin-top: 24px;
+    }
+    
+    &__sub-navigation-list > li {
+        margin-top: 12px;
+        margin-left: 54px;
+    }
+    
+    &__sub-title {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    margin-left: 33px;
+    margin-top: 50px;
+    text-decoration: none;
+    color: $dark-pink-color;
+    }
+    
+    &__sub-navigation-link {
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        color: $black-color;
+    }
+    
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        min-height: 75px;
+        align-items: center;
+    }
+    
+    &__logo {
+        margin: -7px 42px 0 0;
+
+        @include mobile{
+            margin: -7px 30px 0 0;
+        }
+    }
+    
+    &__button {
+        background: transparent;
+        border: none;
+        margin: 0 33px 0 0;
+                
+        @include mobile{
+            margin: 0 0 0 0;
+        }
+    }
+    
+    &__link {
+        margin: 0 33px 0 0;
+    }
+
+    &__mobile-nav {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__mobile-reg {
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        color: #F16D7F;
+        display: none;
+    
+        @include mobile {
+            display: block;
+        }
+    }
+
+    &__mobile-basket {
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        color: #F16D7F;
+        display: none;
+    
+        @include mobile{
+            display: block;
+        }
+    }
+
+    &__dash {
+        margin: 0 2px 2px 2px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        color: #F16D7F;
+        display: none;
+    
+        @include mobile{
+            display: block;
+        }
+    }
+}
+
+@media (max-width: $desktop-width) {
+    .header {
+        padding: 0 16px;
+    }
+}
+@media (max-width: $tablet-width) {
+    .header {
+        padding: 0 16px;
+
+        &__link{
+            display: none;
+        }
+        &__basket{
+            display: none;
+        }
+    }
+}
+
+[type="search"] {
+    width: 300px;
+    height: 30px;
+    border: none;
+    outline:none;
+    border-radius: 10px;
+
+    @include mobile{
+        width: 150px;
+    }
+    @include min-mobile{
+        width: 100px;
+    }
+}
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background: url(/img/Vector.svg);
+    margin-right: 5px;
+}

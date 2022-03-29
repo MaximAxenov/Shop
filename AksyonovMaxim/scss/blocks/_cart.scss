@@ -1,0 +1,303 @@
+.cart{
+    display: flex;
+    padding: 96px 0 0 0;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+
+    @include mobile {
+        padding: 39px 0 0 0;
+    }
+
+    &__products {
+    @include tablet {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        }
+    }
+
+    &__form-descripteon {
+
+        @include tablet {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 128px;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            margin-bottom: 96px;
+        }
+    }
+    
+    &__products {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__img {
+        @include mobile {
+            height: 188px;
+        }
+    }
+
+    &__product {
+        display: flex;
+        margin: 0 0 40px;
+
+        @include mobile {
+            justify-content: center;
+            margin: 0 0 32px;
+        }
+    }
+
+    &__feature {
+        background: #FFFFFF;
+        width: 390px;
+
+        @include tablet {
+            width: 472px;
+        }
+        @include mobile {
+            height: 188px;
+            width: 214px;
+        }
+
+        @include min-mobile {
+            width: 160px;
+        }
+    }
+
+    &__title {
+        width: 262px;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+        margin: 22px 31px;
+        text-transform: uppercase;
+
+        @include mobile {
+            height: 35px;
+            width: 143px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19px;
+        }
+
+        @include min-mobile {
+            width: 110px;
+            font-size: 14px;
+        }
+    }
+
+    &__text {
+        padding: 6px 0 0 31px;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 26px;
+
+        @include mobile {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+        }
+    }
+
+    &__product-number {
+        width: 43px;
+        height: 24px;
+
+        @include mobile {
+            height: 14px;
+            width: 23px;
+        }
+    }
+
+    &__price {
+        color: $dark-pink-color;
+
+        @include mobile {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+        }
+    }
+
+    &__button-s {
+        width: 652px;
+        display: flex;
+        justify-content: space-between;
+        margin: 72px 0 128px 0;
+
+        @include tablet {
+            width: 732px;
+            margin: 62px 0 64px 0;
+        }
+
+        @include mobile {
+            width: 375px;
+            display: flex;
+            margin: 30px 0 48px 0;
+        }
+
+        @include min-mobile{
+            width: 320px;
+        }
+    }
+
+    &__button {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 17px;
+        border: 1px solid #A4A4A4;
+        height: 50px;
+        width: 235px;
+        background-color: $light-white-color;
+
+        @include mobile {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14px;
+            height: 33px;
+            width: 175px;          
+        }
+
+        @include min-mobile {
+            width: 160px;
+        }
+    }
+    
+    &__form-address {
+    height: 45px;
+    width: 343px;
+    margin-bottom: 20px;
+    border: 1px solid #A4A4A4;
+    padding: 0 0 0 17px;
+
+        @include min-mobile {
+            width: 300px;
+        }
+    }
+    
+    &__title-form {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 19px;
+        margin-bottom: 20px;
+    }
+    
+    &__button-form {
+        font-size: 11px;
+        font-weight: 300;
+        line-height: 13px;
+        height: 34px;
+        width: 100px;
+        background-color: $light-white-color;
+        border: 1px solid #A4A4A4;
+    }
+    
+    &__button-product {
+        z-index: 1;
+        border: none;
+        width: 18px;
+        height: 18px;
+        background: url(/img/Vector-cart.svg);
+        background-repeat: no-repeat;
+        float: right;
+        margin-right: 22px;
+        margin-top: -205px;
+
+        @include mobile {
+            background-image: url(/img/Vector-mobile.svg);
+            height: 11px;
+            width: 9px;
+            margin-right: 12px;
+            margin-top: -150px;
+        }
+
+        @include min-mobile {
+            margin-right: 3px;
+            margin-top: -170px;
+        }
+    }
+
+    &__purchase {
+        height: 175px;
+        width: 360px;
+        background: #F5F3F3;
+        margin-top: 58px;
+        padding: 39px 0 0 0;
+
+        @include tablet {
+            margin-top: 15px;
+        }
+
+        @include mobile {
+            margin-top: 48px;
+        }
+
+        @include min-mobile {
+            width: 320px;
+        }
+    }
+
+    &__purchase-text-sub {
+        text-align: right;
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 13px;
+    }
+
+    &__purchase-text-gtand {
+        text-align: right;
+        margin-top: 12px;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 19px;
+        text-transform: uppercase;
+    }
+
+    hr {
+        margin-top: 21px;
+        width: 275px;
+        text-align: center;
+        background: #E2E2E2;
+    }
+
+    &__purchase-span {
+        margin-right: 34px;
+        margin-left: 34px;
+    }
+
+    &__purchase-span-price {
+        color: $dark-pink-color;
+        margin-right: 34px;
+        margin-left: 34px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19px;
+    }
+
+    &__button-purchase {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 19px;
+        text-transform: uppercase;
+        height: 50px;
+        width: 273px;
+        margin-left: 44px;
+        margin-top: 17px;
+        background: $light-white-color;
+        border: 1px solid $dark-pink-color;
+        color: $dark-pink-color;
+
+        @include min-mobile {
+            margin-left: 22px;
+        }
+    }
+
+    &__button-purchase:hover {
+        background-color: $dark-pink-color;
+        color: $light-white-color;
+    }
+}
